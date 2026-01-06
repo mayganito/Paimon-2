@@ -9,7 +9,8 @@ module.exports = () => {
 			try {
 				const config = require("../config");
 				res(config);
-			} catch {
+			} catch (err) {
+				console.error("Error loading config:", err);
 				rej("No config file found.");
 			}
 		}
