@@ -2,6 +2,17 @@
 require('dotenv').config()
 
 const DiscordMusicBot = require("./lib/DiscordMusicBot");
+
+console.log("!!! SYSTEM STARTUP - DEBUG PROBE !!!");
+console.log("Current Directory:", __dirname);
+try {
+	const fs = require('fs');
+	console.log("Config file exists check:", fs.existsSync('./config.js'));
+	console.log("Config file stats:", fs.statSync('./config.js').isDirectory() ? "DIRECTORY" : "FILE");
+} catch (e) {
+	console.log("Config file check error:", e.message);
+}
+
 const { exec } = require("child_process");
 
 if (process.env.REPL_ID) {
