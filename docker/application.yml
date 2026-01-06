@@ -7,7 +7,7 @@ plugins:
     allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
-    clients: ["TVHTML5Embedded", "MUSIC"]
+    clients: ["TVHTML5Embedded", "WEB"]
     oauth:
       enabled: true
 #  name: # Name of the plugin
